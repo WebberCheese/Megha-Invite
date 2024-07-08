@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Megha's Birthday Invite</title>
+    <style>
+        
+        .background{
+            background-color: #B7B597;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #Parchment{
+            background-color: #DAD3BE;
+            height: 80%;
+            width:90%;
+            box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
+            filter: url(#wavy2);
+            justify-content: center;
+            align-items: center;
+            
+        }
+        #content{
+            z-index: 2;
+            position:absolute;
+        }
+        .Text{
+            display: flex;
+        }
+    </style>
+</head>
+<body style="background-color: #B7B597;">
+    <div class="Text">
+    </div>
+    <div class="background">
+        <div id ="Parchment">   </div>
+    <div id="content">
+        <div class="Text">
+            
+        </div>   
+            
+    </div>    
+    </div>
+    
+</body>
+<svg>
+    <filter id="wavy2">
+      <feTurbulence x="0" y="0" baseFrequency="0.02" numOctaves="5" seed="1" />
+      <feDisplacementMap in="SourceGraphic" scale="20" />
+    </filter>
+    <filter id="none">
+        <feTurbulence x="0" y="0" baseFrequency="0" numOctaves="0" seed="0" />
+      </filter>
+</html>
