@@ -4,46 +4,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Megha's Birthday Invite</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+
     <style>
-        
         .background{
             background-color: #B7B597;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            display: grid;
+            grid-template-rows: 1fr 5fr 1fr 5fr 1fr 2fr 1fr;
+            grid-template-columns: 1fr 5fr 1fr 1fr 1fr;
             height: 100vh;
+            gap:0px;
         }
         #Parchment{
             background-color: #DAD3BE;
-            height: 80%;
-            width:90%;
             box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
             filter: url(#wavy2);
             justify-content: center;
             align-items: center;
+            grid-area: 2/2/7/5;
             
         }
         #content{
+            z-index: 1;
+            grid-area: 2/2/7/5;
+            text-align: center ;
+            font-family: "Caveat", cursive;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+            padding: 20px;
+            color: #254336;
+        }
+        p{
+            font-size: 1.5rem;
+        }
+        .left{
+            padding-left: 100px;
+            text-align: left;
+        }
+        #house{
+            grid-area: 2/4/3/5;
             z-index: 2;
-            position:absolute;
         }
-        .Text{
-            display: flex;
+        #castle{
+            grid-area: 4/4/5/5;
+            z-index: 2;
         }
+        img{
+            border-radius: 50%;
+            height:150px;
+            padding: 100px;
+        }
+        
+        @media(max-width:1200px){
+            img{
+                height: 100px;
+            }
+            #house{
+                position: relative;
+                bottom: 75px;
+                left:75px;
+            }
+            #castle{
+                position: relative;
+                top: 50px;
+                left:75px;
+            }
+        @media(max-width:900px)
+        {
+            .left{
+                padding-left:20px;
+            }
+        }
+        @media(max-width: 599px){
+            img{
+                height:75px;
+            }
+            #castle{
+                top:100px;
+            }
+            #house{
+                bottom:15px;
+            }
+        }
+        }
+        
     </style>
 </head>
 <body style="background-color: #B7B597;">
-    <div class="Text">
-    </div>
+
     <div class="background">
-        <div id ="Parchment">   </div>
-    <div id="content">
-        <div class="Text">
+        <div id ="Parchment"></div>
+        <div id="content">
+            <h1>It's Megha's Birthday!!!</h1>
+            <div class="left">
+                <p>Dear wizards/witches,</p>
+            </div>
             
-        </div>   
+            <p>You are invited to my birthday party!</p>
+            <p>On 11th of July, at my home 5pm onwards!</p>
+            <p>The theme is Harry Potter, please dress matching colors with your house.</p>
+            <p>Click the Emblem to find out your house and the castle to find mine!</p>
+            <p>Hope you join me on this wonderful day!</p>
             
-    </div>    
-    </div>
+    
+            <div class="left">
+                <p>Regards, <br> Megha <br> House Captain of Ravenclaw</p>
+            </div>
+            
+            
+        </div>
+        <div id ="house">
+            <a href="https://www.wizardingworld.com/news/discover-your-hogwarts-house-on-wizarding-world"><img src="./Assets/houses.png" ></a>
+        </div>
+        <div id="castle">
+            <a href="https://maps.app.goo.gl/XwYM9THB7ms3K6EAA"><img src="./Assets/Castle.jpg" >  </a>
+        </div>
     
 </body>
 <svg>
